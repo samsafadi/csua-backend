@@ -88,7 +88,7 @@ def VerifyUser(username, sid):
         l.unbind_s()
         return False
 # Austin: UID bounds currently hardcoded. Change for later
-   return sid = int(result[0][1]['sid'][0]) && 30987 > int(result[0][1]['uidNumber']) > 2298
+    return sid == int(result[0][1]['sid'][0]) and 30987 > int(result[0][1]['uidNumber']) > 2298
 
 def IsOfficer(username):
     base_dn = "dc=csua,dc=berkeley,dc=edu"
