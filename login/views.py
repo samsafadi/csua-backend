@@ -14,13 +14,12 @@ def auth(request):
   if request.method == 'POST':
     username = request.POST.get("username")
     password = request.POST.get("password")
-    else:
-      template = loader.get_template("login.html")
-      context = RequestContext(request, {'error':'Invalid credentials'})
-      return HttpResponse(template.render(context))
-    template = loader.get_template("auth.html")
-    context = RequestContext(request, {})
+    template = loader.get_template("login.html")
+    context = RequestContext(request, {'error':'Invalid credentials'})
     return HttpResponse(template.render(context))
+  template = loader.get_template("auth.html")
+  context = RequestContext(request, {})
+  return HttpResponse(template.render(context))
 
 def verify(request):
   if request.method == 'POST':
