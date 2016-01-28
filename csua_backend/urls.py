@@ -4,6 +4,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
   url(r'', include('main_page.urls')),
+  url(r'login/', include('login.urls')),
   url(r'newuser/', include('newuser.urls')),
   url(r'computers/', include('tracker.urls')),
   url(r'~', include('homedirs.urls')),
