@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load markdown_deux_tags %}
 {% block title %}Home{% endblock %}
 {% block css_file %}index.css{% endblock %}
 {% block content %}
@@ -67,18 +68,18 @@
   </div>
   <div class="blockseparation"></div>
   <div class="block">
-    <div class="header">Our Office</div>
-    <div class="text">
-      The CSUA Office is located in 311 Soda Hall in front of the 3rd floor
-      entrance to Soda Hall, at the corner of Hearst &amp; LeRoy.
-      We also maintain a study lounge at 341 Soda Hall (within Soda).
-    </div>
-    <div class="text">
-      We work around the clock to provide computing resources, support, and
-      community to the computer science students at Berkeley.
-      In the rare case that you have an emergency and the office is vacant, you
-      may email us at politburo@csua.berkeley.edu.
-    </div>
+    {% markdown %}
+# Our Office
+
+The CSUA Office is located in 311 Soda Hall in front of the 3rd floor
+entrance to Soda Hall, at the corner of Hearst &amp; LeRoy.
+We also maintain a study lounge at 341 Soda Hall (within Soda).
+
+We work around the clock to provide computing resources, support, and
+community to the computer science students at Berkeley.
+In the rare case that you have an emergency and the office is vacant, you
+may email us at politburo@csua.berkeley.edu.
+      {% endmarkdown %}
     <div id="officeaddress">
       <div id="address" class="text">
         <b>Address:</b></br>
