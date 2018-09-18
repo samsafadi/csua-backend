@@ -130,7 +130,7 @@ if not DEBUG:
     SECURE_HSTS_SECONDS = 60  # Should this be an integer?
     SECURE_HSTS_PRELOAD = True
     SECURE_HSTS_INCLUDE_SUBDOMAINS = True
-    SECURE_CONTENT_TYPE_NOSNIFF = True  # will this break homedirs
+    SECURE_CONTENT_TYPE_NOSNIFF = True
     SECURE_BROWSER_XSS_FILTER = True
     SECURE_SSL_HOST = "www.csua.berkeley.edu"
     SECURE_SSL_REDIRECT = True
@@ -219,7 +219,6 @@ INSTALLED_APPS = [
     "apps.newuser",
     "apps.db_data",
     "apps.tracker",
-    "apps.homedirs",
     "apps.fb_events",
     # third-party
     "markdown_deux",
