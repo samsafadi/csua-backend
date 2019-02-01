@@ -48,7 +48,7 @@ def ping(request, code_text=None, signature=None):
     delta = data["delta"]
     username = data["username"]
     hostname = data["host"].lower()
-    timestamp = datetime.fromtimestamp(int(data["timestamp"] / 1000))
+    timestamp = datetime.fromtimestamp(int(data["timestamp"] / 1000), tz=timezone.utc)
 
     user, _ = User.objects.get_or_create(username=username)
     computer, _ = Computer.objects.get_or_create(hostname=hostname)
@@ -62,7 +62,7 @@ def ping(request, code_text=None, signature=None):
     user.last_ping = now
     user.save()
 
-    computer.local_timestamp = datetime.now(timezone.utc)
+    computer.local_timestamp = datetime.now(tz=timezone.utc)
     computer.foreign_timestamp = timestamp
     computer.user = user
     computer.save()
