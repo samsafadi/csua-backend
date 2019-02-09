@@ -3,9 +3,15 @@ CSUA-backend
 
 A backend for the CSUA interblags.
 
+## Pre-installation
+
+0. (if no write access) fork this repo
+1. `git clone` this repo or your fork
+2. `git checkout dev`
+
 ## Installation
 
-1. Install Python 3
+1. Install Python 3.5+
 2. Install Django and dependencies with `pip3 install --user -r requirements/dev.txt`
 3. Set up local db with `python3 manage.py --debug migrate`
 4. Run server with `python3 manage.py --debug runserver`
