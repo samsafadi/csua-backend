@@ -1,0 +1,3 @@
+https://docs.djangoproject.com/en/2.2/topics/auth/default/#django.contrib.auth.forms.PasswordResetForm
+
+gecos contains Name and email. Check to make sure username matches email otherwise just redirect without sending
